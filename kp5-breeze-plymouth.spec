@@ -1,15 +1,15 @@
-%define		kdeplasmaver	5.24.2
+%define		kdeplasmaver	5.24.3
 %define		qtver		5.9.0
 %define		kpname		breeze-plymouth
 
 Summary:	breeze-plymouth
 Name:		kp5-%{kpname}
-Version:	5.24.2
+Version:	5.24.3
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	1844b9526da0f3a6203718a7dbc6bc15
+# Source0-md5:	72b0e29802d012decb86807b4534c56d
 URL:		http://www.kde.org/
 BuildRequires:	cmake >= 2.8.12
 BuildRequires:	kf5-extra-cmake-modules >= 1.8.0
