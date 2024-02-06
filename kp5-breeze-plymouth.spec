@@ -1,28 +1,28 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeplasmaver	5.27.10
+%define		kdeplasmaver	5.93.0
 %define		qtver		5.15.2
 %define		kpname		breeze-plymouth
 
 Summary:	breeze-plymouth
 Name:		kp5-%{kpname}
-Version:	5.27.10
-Release:	1
+Version:	5.93.0
+Release:	0.1
 License:	LGPL v2.1+
 Group:		X11/Libraries
-Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	fe7bb4efec17206a9faceb9cfe35fbf5
+Source0:	https://download.kde.org/unstable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
+# Source0-md5:	c5fdb6468b14193bc387d9624219b917
 URL:		http://www.kde.org/
 BuildRequires:	cmake >= 3.16.0
-BuildRequires:	kf5-extra-cmake-modules >= 1.8.0
+BuildRequires:	kf6-extra-cmake-modules >= 1.8.0
 BuildRequires:	ninja
 BuildRequires:	plymouth-devel
 BuildRequires:	rpmbuild(macros) >= 1.164
 BuildRequires:	xz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		qt5dir		%{_libdir}/qt5
+%define		qt6dir		%{_libdir}/qt6
 
 %description
 breeze-plymouth.
@@ -51,6 +51,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%{_libdir}/plymouth/breeze-text.so
+%attr(755,root,root) %{_libdir}/plymouth/breeze-text.so
 %{_datadir}/plymouth/themes/breeze-text
 %{_datadir}/plymouth/themes/breeze
