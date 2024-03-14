@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeplasmaver	5.27.10
+%define		kdeplasmaver	5.27.11
 %define		qtver		5.15.2
 %define		kpname		breeze-plymouth
 
 Summary:	breeze-plymouth
 Name:		kp5-%{kpname}
-Version:	5.27.10
+Version:	5.27.11
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	fe7bb4efec17206a9faceb9cfe35fbf5
+# Source0-md5:	5154b576ccc84d3509b556f02016ced5
 URL:		http://www.kde.org/
 BuildRequires:	cmake >= 3.16.0
 BuildRequires:	kf5-extra-cmake-modules >= 1.8.0
